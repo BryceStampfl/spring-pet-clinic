@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/BryceStampfl/spring-pet-clinic.git</developerConnection>
+        <developerConnection>scm:git:gitbryce@github.com:BryceStampfl/spring-pet-clinic</developerConnection>
     </scm>
 
     <groupId>bs.springframework</groupId>

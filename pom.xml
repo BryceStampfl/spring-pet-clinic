@@ -9,7 +9,7 @@
 
     <groupId>bs.springframework</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <modules>
         <module>pet-clinic-data</module>

@@ -4,12 +4,12 @@
 
     <scm>
         <developerConnection>scm:git:gitbryce@github.com:BryceStampfl/spring-pet-clinic</developerConnection>
-      <tag>pet-clinic-0.0.2</tag>
+      <tag>pet-clinic-1.0.2</tag>
   </scm>
 
     <groupId>bs.springframework</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
 
     <modules>
         <module>pet-clinic-data</module>

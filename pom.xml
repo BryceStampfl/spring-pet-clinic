@@ -5,7 +5,7 @@
 
     <groupId>bs.springframework</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <modules>
         <module>pet-clinic-data</module>
@@ -49,7 +49,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:BryceStampfl/spring-pet-clinic</developerConnection>
-        <tag>pet-clinic-1.0.2</tag>
+        <tag>pet-clinic-1.0.0</tag>
     </scm>
 
 </project>

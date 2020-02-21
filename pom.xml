@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:BryceStampfl/spring-pet-clinic</developerConnection>
+        <developerConnection>scm:git:ssh://https://github.com/BryceStampfl/spring-pet-clinic.git</developerConnection>
       <tag>pet-clinic-1.0.2</tag>
   </scm>
 

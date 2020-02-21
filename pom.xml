@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <scm>
-        <developerConnection>scm:git:ssh://https://github.com/BryceStampfl/spring-pet-clinic.git</developerConnection>
-      <tag>pet-clinic-1.0.2</tag>
-  </scm>
+    <packaging>pom</packaging>
 
     <groupId>bs.springframework</groupId>
     <artifactId>pet-clinic</artifactId>
@@ -16,7 +12,6 @@
         <module>pet-clinic-web</module>
     </modules>
 
-    <packaging>pom</packaging>
 
     <name>pet-clinic</name>
     <description>Pet Clinic</description>
@@ -51,5 +46,10 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <scm>
+        <developerConnection>scm:git:git@github.com:BryceStampfl/spring-pet-clinic</developerConnection>
+        <tag>pet-clinic-1.0.2</tag>
+    </scm>
 
 </project>

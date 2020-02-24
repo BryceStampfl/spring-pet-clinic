@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/owners")
 @Controller
 public class OwnerController {
 
@@ -15,7 +14,7 @@ public class OwnerController {
         this.ownerService = ownerService;
     }
 
-    @RequestMapping({"","/","/index","/index.html"})
+    @RequestMapping({"/owners","/owners/index","/owners/index.html"})
     //Spring automatically injects Model when it calls this method
     public String listOwners(Model model){
         // "owners" is the name of the property/attribute inside of the model
@@ -24,4 +23,10 @@ public class OwnerController {
         //Returns the owners index page
         return "owners/index";
     }
+
+    @RequestMapping("/find")
+    public String findOwners(){
+        return "Not Implemented";
+    }
+
 }

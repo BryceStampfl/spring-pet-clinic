@@ -6,9 +6,15 @@ bs\springframework\petclinic\model\Owner.class
 bs\springframework\petclinic\services\PetService.class
 bs\springframework\petclinic\services\OwnerService.class
 bs\springframework\petclinic\model\BaseEntity.class
+bs\springframework\petclinic\services\map\PetTypeServiceMap.class
+bs\springframework\petclinic\model\Visit.class
+bs\springframework\petclinic\services\SpecialtyService.class
+bs\springframework\petclinic\services\PetTypeService.class
 bs\springframework\petclinic\services\map\AbstractMapService.class
 bs\springframework\petclinic\model\PetType.class
+bs\springframework\petclinic\model\Specialty.class
 bs\springframework\petclinic\services\VetService.class
 bs\springframework\petclinic\services\map\PetServiceMap.class
+bs\springframework\petclinic\services\map\SpecialtyMapService.class
 bs\springframework\petclinic\model\Pet.class
 bs\springframework\petclinic\services\map\OwnerServiceMap.class

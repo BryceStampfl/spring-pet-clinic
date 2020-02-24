@@ -2,7 +2,6 @@ package bs.springframework.petclinic.services.map;
 
 import bs.springframework.petclinic.model.Owner;
 import bs.springframework.petclinic.model.Pet;
-import bs.springframework.petclinic.model.PetType;
 import bs.springframework.petclinic.services.OwnerService;
 import bs.springframework.petclinic.services.PetService;
 import bs.springframework.petclinic.services.PetTypeService;

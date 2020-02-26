@@ -4,12 +4,14 @@ import bs.springframework.petclinic.model.Specialty;
 import bs.springframework.petclinic.model.Vet;
 import bs.springframework.petclinic.services.SpecialtyService;
 import bs.springframework.petclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Profile({"default", "map"})
 @Service
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService{
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     private final SpecialtyService specialtyService;
 
@@ -25,10 +27,10 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet object) {
-        
-        if (object.getSpecialties().size() > 0){
+
+        if (object.getSpecialties().size() > 0) {
             object.getSpecialties().forEach(specialty -> {
-                if(specialty.getId() == null){
+                if (specialty.getId() == null) {
                     Specialty savedSpecialty = specialtyService.save(specialty);
                     specialty.setId(savedSpecialty.getId());
                 }

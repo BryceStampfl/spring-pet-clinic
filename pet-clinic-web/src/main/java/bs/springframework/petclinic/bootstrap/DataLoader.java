@@ -46,7 +46,7 @@ public class DataLoader implements CommandLineRunner {
 
         PetType cat = new PetType();
         dog.setName("Cat");
-        PetType savedCatPetType = petTypeService.save(dog);
+        PetType savedCatPetType = petTypeService.save(cat);
 
         Specialty radiology = new Specialty();
         radiology.setDescription("Radiology");
@@ -80,9 +80,9 @@ public class DataLoader implements CommandLineRunner {
         Owner owner2 = new Owner();
         owner2.setFirstName("Bob");
         owner2.setLastName("Saggot");
-        owner1.setAddress("Berkeley 1200 st");
-        owner1.setCity("Joshua 500 st.");
-        owner1.setTelephone("3333333333");
+        owner2.setAddress("Berkeley 1200 st");
+        owner2.setCity("Joshua 500 st.");
+        owner2.setTelephone("3333333333");
 
         Pet bobsPet = new Pet();
         bobsPet.setPetType(savedCatPetType);

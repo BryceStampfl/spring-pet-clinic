@@ -1,10 +1,7 @@
 package bs.springframework.petclinic.bootstrap;
 
 import bs.springframework.petclinic.model.*;
-import bs.springframework.petclinic.services.OwnerService;
-import bs.springframework.petclinic.services.PetTypeService;
-import bs.springframework.petclinic.services.SpecialtyService;
-import bs.springframework.petclinic.services.VetService;
+import bs.springframework.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -13,18 +10,23 @@ import java.time.LocalDate;
 @Component
 public class DataLoader implements CommandLineRunner {
 
+
+    //Since I'm declaring it by its interface I allow Spring's to inject based on one of the
+    //active profiles.
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
+
 
 
     @Override
@@ -118,6 +120,22 @@ public class DataLoader implements CommandLineRunner {
 
         System.out.println("Loading Owners...");
 
+        Visit catVisit = new Visit();
+        catVisit.setPet(marilynsCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Kitten Sneezing a lot");
+        visitService.save(catVisit);
+
+        Visit dogVisit = new Visit();
+        dogVisit.setPet(thorsPet);
+        dogVisit.setDate(LocalDate.now());
+        dogVisit.setDescription("Dogs fur is tye dyed");
+
+
+
+
+
+
         Vet vet1 = new Vet();
         vet1.setFirstName("Adam");
         vet1.setLastName("Sandler");
@@ -138,5 +156,7 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet3);
 
         System.out.println("Loading Vet");
+
+
     }
 }

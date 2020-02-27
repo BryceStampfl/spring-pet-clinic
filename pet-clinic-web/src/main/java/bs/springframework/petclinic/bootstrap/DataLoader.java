@@ -28,13 +28,12 @@ public class DataLoader implements CommandLineRunner {
     }
 
 
-
     @Override
     public void run(String... args) throws Exception {
 
         int count = petTypeService.findAll().size();
 
-        if (count == 0){
+        if (count == 0) {
             loadData();
         }
     }
@@ -61,13 +60,9 @@ public class DataLoader implements CommandLineRunner {
         dentistry.setDescription("dentistry");
         specialtyService.save(dentistry);
 
+        Owner owner1 = Owner.builder().firstName("Thor").lastName("Ragnarok").address("Yggdrasil 500 ct.")
+                .city("Otherworld").telephone("0123456789").build();
 
-        Owner owner1 = new Owner();
-        owner1.setFirstName("Thor");
-        owner1.setLastName("Ragnarok");
-        owner1.setAddress("Yggdrasil 500 ct.");
-        owner1.setCity("Otherworld");
-        owner1.setTelephone("0123456789");
 
         Pet thorsPet = new Pet();
         thorsPet.setPetType(savedDogPetType);
@@ -130,10 +125,6 @@ public class DataLoader implements CommandLineRunner {
         dogVisit.setPet(thorsPet);
         dogVisit.setDate(LocalDate.now());
         dogVisit.setDescription("Dogs fur is tye dyed");
-
-
-
-
 
 
         Vet vet1 = new Vet();
